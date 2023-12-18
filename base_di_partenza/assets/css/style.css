@@ -242,10 +242,10 @@ footer a {
     margin-right: auto;
   }
 
-  /* form {
+  form {
     display: flex;
     align-items: center;
-  } */
+  }
 
   input[type="email"] {
     width: 100%;
@@ -269,25 +269,32 @@ footer a {
 
   header div img {
     width: 100%;
-    height: auto; /* Imposta l'altezza su 'auto' per mantenere le proporzioni originali */
+    height: auto;
   }
 
   header nav {
-    height: auto; /* Aggiorna l'altezza del nav */
+    height: auto;
     width: auto;
     display: flex;
-    justify-content: flex-end; /* Allinea gli elementi alla fine del nav */
   }
-
+  
   header nav ul {
-    list-style: none; /* Rimuovi i punti elenco */
+    
+    list-style: none;
     display: flex;
     margin: 0;
+    padding: 0; /* Rimuove il padding predefinito */
   }
-
+  
   header nav li {
     margin-right: 10px;
   }
+  
+  /* Aggiungi margine solo ai li tranne all'ultimo */
+  header nav li:not(:last-child) {
+    margin-right: 10px;
+  }
+  
 
   /* Regole per la sezione principale */
   section {
@@ -329,24 +336,19 @@ footer a {
   section .novita p {
     text-align: left;
   }
-}
-
-/* Posiziona il video di YouTube a sinistra e le novità sulla stessa riga su schermi più piccoli
-@media screen and (max-width: 768px) {
   section {
     flex-direction: column;
     align-items: center;
   }
 
   iframe {
-    max-width: 50%; /* Rendi il video più piccolo su schermi più piccoli */
-/* order: -1; Sposta l'iframe prima nella sequenza, posizionandolo a sinistra */
-/* }
+    max-width: 50%; 
+order: -1; 
+
 
   section .novita {
-    max-width: 50%; /* Fai in modo che le novità siano large quanto l'iframe */
-/* }
-} */
+    max-width: 50%;}
+
 
 @media screen and (min-width: 1200px) {
 }
